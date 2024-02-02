@@ -9,8 +9,8 @@ Import("env_modules")
 module_env = env.Clone()
 
 # Add include paths and library paths for the module
-env.Append(CPPPATH=["."])
-env.Append(LIBPATH=["thirdparty/spmemvfs", "thirdparty/sqlite"])
+module_env.Append(CPPPATH=["."])
+module_env.Append(LIBPATH=["thirdparty/spmemvfs", "thirdparty/sqlite"])
 
 module_env.Append(CPPDEFINES=[("SQLITE_ENABLE_RBU", 1), ("SQLITE_USE_URI", 1), "SQLITE_ENABLE_JSON1"])
 
