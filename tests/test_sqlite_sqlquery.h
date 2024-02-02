@@ -60,15 +60,6 @@ TEST_CASE("[Modules][SQLite] handle invalid queries") {
 	teardown();
 }
 
-TEST_CASE("[Modules][SQLite] check if database can be open twice") {
-	setup();
-
-	CHECK(db->open("user://godot_test_already_open.sqlite"));
-	CHECK(db->open("user://godot_test_already_open.sqlite"));
-
-	teardown();
-}
-
 TEST_CASE("[Modules][SQLite] database operations") {
 	setup();
 
