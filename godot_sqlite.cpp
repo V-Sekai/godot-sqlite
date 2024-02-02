@@ -287,7 +287,7 @@ SQLite::~SQLite() {
 }
 
 void SQLite::_bind_methods() {
-	ClassDB::bind_method(D_METHOD("open"), &SQLite::open);
+	ClassDB::bind_method(D_METHOD("open", "path"), &SQLite::open);
 	ClassDB::bind_method(D_METHOD("open_in_memory"), &SQLite::open_in_memory);
 	ClassDB::bind_method(D_METHOD("open_buffered", "path", "buffers", "size"),
 			&SQLite::open_buffered);
